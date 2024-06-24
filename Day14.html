@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //count each letter in string
+    //   str = prompt("enter a string:").replaceAll(" ", "");
+    //   lower = str.toLowerCase().split("").sort();
+    //   emp = [];
+    //   for (i of lower) 
+    //   {
+    //     if (!emp.includes(i)) 
+    //     {
+    //       emp.push(i);
+    //     }
+    //   }
+    //   for (i of emp) 
+    //   {
+    //     c = 0;
+    //     for (j of lower) 
+    //     {
+    //       if (i == j) 
+    //       {
+    //         c++;
+    //       }
+    //     }
+    //     if (str.includes(i.toUpperCase())) 
+    //     {
+    //       console.log(i.toUpperCase(), c);
+    //     } else 
+    //     {
+    //       console.log(i, c);
+    //     }
+    //   }
+
+      //Assignment
+      //input: Enter a string: Good Bye
+      // output:
+      // B - 1
+      // G - 1
+      // d - 1
+      // e - 1
+      // o - 2
+      // y - 1
+str=prompt("enter a string:").replaceAll(" ","").split("").sort()
+emp=[]
+for(i of str)
+{
+    if(!emp.includes(i))
+    {
+        emp.push(i)
+    }
+}
+for(i of emp)
+{
+    c=0
+    for(j of str)
+    {
+        if(i==j)
+        {
+            c++;
+        }
+    }
+    console.log(i,c)
+}
+console.log("\n");
+// 2) input: Enter a string: Good Bye
+// output:
+// d - 1
+// e - 1 
+// o - 2
+// y - 1
+// B - 1
+// G - 1
+n=[]
+for(i=2;i<emp.length;i++)
+{
+    n.push(emp[i])
+}
+for(i=0;i<2;i++)
+{
+    n.push(emp[i])
+}
+
+for(i of n)
+{
+    c=0
+    for(j of str)
+    {
+        if(i==j)
+        {
+            c++;
+        }
+    }
+    console.log(i,c)
+}
+
+// 3) input: Enter a string: programming (oai - iao )
+// output:
+// prigrammong
+var a="programming";
+ref="aeiouAEIOU"
+vow=[];
+ind=[];
+for(i=0;i<a.length;i++)
+{
+    if(ref.includes(a[i]))
+    {
+        vow.push(a[i]);
+        ind.push(i);
+    }
+}
+j=0;
+vow=vow.reverse();
+result=""
+for(i=0;i<a.length;i++)
+{
+    if(i==ind[j])
+    {
+        result=result+vow[j];
+        j++;
+    }
+    else
+    {
+        result=result+a[i];
+    }
+}
+console.log(result);
+
+
+    </script>
+  </body>
+</html>
